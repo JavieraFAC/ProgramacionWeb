@@ -11,7 +11,7 @@
 
 </head>
 <body>
-<!--MENU-->
+<!-- MENU: Sección que contiene el menú de navegación -->
 <div style="text-align: center;">
   <a href="./Index.html"><img src="Imagenes/EL COMILON.png" alt="El comilon" style="width:150px;"></a>
 </div>
@@ -22,26 +22,35 @@
       </button>
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
+          <!-- Elemento de menú: Menus -->
           <li class="nav-item">
             <a class="nav-link" href="./Productos.html">Menus</a>
           </li>
+          <!-- Elemento de menú con submenú: Planes -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="./Planes.html" role="button" data-bs-toggle="dropdown">Planes </a>
             <ul class="dropdown-menu">
+              <!-- Elemento de submenú: Plan Diario -->
               <li><a class="dropdown-item" href="./Planes.html">Plan Diario </a></li>
+              <!-- Elemento de submenú: Plan Semanal -->
               <li><a class="dropdown-item" href="./Planes.html">Plan Semanal</a></li>
-              <li><a class="dropdown-item" href="./Planes.html"">Plan Mensual</a></li>
+              <!-- Elemento de submenú: Plan Mensual -->
+              <li><a class="dropdown-item" href="./Planes.html">Plan Mensual</a></li>
             </ul>
           </li>
+          <!-- Elemento de menú: Restaurantes -->
           <li class="nav-item">
             <a class="nav-link" href="./Retaurantes.html">Restaurantes</a>
           </li> 
         </li>
+        <!-- Elemento de menú: Cuenta -->
         <li class="nav-item">
           <a class="nav-link" href="./Cuenta.html">Cuenta</a>
-        </li> <li class="nav-item" ><a class="nav-link" href="Carrito.html" > <img src="Imagenes/carrito.png" alt="cacerola" style="height: 25px; width: 25px;margin-left: 5px;"></a> 
-           <!--boton modal profile -->
-           <li>
+        </li> 
+        <!-- Elemento de menú con imagen de carrito -->
+        <li class="nav-item" ><a class="nav-link" href="Carrito.html" > <img src="Imagenes/carrito.png" alt="cacerola" style="height: 25px; width: 25px;margin-left: 5px;"></a> 
+          <!-- Botón para abrir el modal del perfil --> 
+          <li>
             <div class="container">
               <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#profileModal">Abrir
                 Profile</button>
@@ -51,20 +60,20 @@
         </ul>
       </div>
      
-      
+      <!-- Formulario de búsqueda -->
       <form class="d-flex">
         <input class="form-control me-2" type="text" placeholder="Buscar">
         <button class="btn btn-primary" type="button">Buscar</button>
       </form>
     </div>
 </nav>
-<!--TITULO ------------------------------>
 
+<!-- TÍTULO: Inicio sesión -->
 <div class="container-fluid" style="background-color: rgb(26, 26, 26); text-align: center;">
     <div class="col" style="color: aliceblue;padding: 40px;">
         <h1>Inicio sesión</h1> </div>
 
-      <!--carrito-->
+      <!-- SECCIÓN: Contiene la sección del carrito -->
      <div class="container-fluid" >
         <section class="h-100 h-custom" style="background-color: #d2c9ff;">
             <div class="container py-5 h-100">
@@ -80,7 +89,8 @@
                               <h6 class="mb-0 text-muted">3 items</h6>
                             </div>
                             <hr class="my-4">
-          
+                            
+                            <!-- Sección del primer producto -->
                             <div class="row mb-4 d-flex justify-content-between align-items-center">
                               <div class="col-md-2 col-lg-2 col-xl-2">
                                 <img
@@ -114,7 +124,8 @@
                             </div>
           
                             <hr class="my-4">
-          
+                            
+                            <!-- Sección del segundo producto -->
                             <div class="row mb-4 d-flex justify-content-between align-items-center">
                               <div class="col-md-2 col-lg-2 col-xl-2">
                                 <img
@@ -148,7 +159,8 @@
                             </div>
           
                             <hr class="my-4">
-          
+                            
+                            <!-- Sección del tercer producto -->
                             <div class="row mb-4 d-flex justify-content-between align-items-center">
                               <div class="col-md-2 col-lg-2 col-xl-2">
                                 <img
@@ -183,17 +195,21 @@
           
                             <hr class="my-4">
           
+                            <!-- Enlace para volver -->
                             <div class="pt-5">
                               <h6 class="mb-0"><a href="main.html" class="text-body"><i
                                     class="fas fa-long-arrow-alt-left me-2"></i>Volver</a></h6>
                             </div>
                           </div>
                         </div>
+
+                        <!-- Sección de resumen de compra -->
                         <div class="col-lg-4 bg-grey">
                           <div class="p-5">
                             <h3 class="fw-bold mb-5 mt-2 pt-1"></h3>
                             <hr class="my-4">
-          
+                            
+                            <!-- Sección de detalle de items y envío -->
                             <div class="d-flex justify-content-between mb-4">
                               <h5 class="text-uppercase">items </h5>
                               <h5> 17.000</h5>
@@ -208,7 +224,8 @@
                                 
                               </select>
                             </div>
-          
+                            
+                            <!-- Sección para ingresar código -->
                             <h5 class="text-uppercase mb-3">Código</h5>
           
                             <div class="mb-5">
@@ -219,7 +236,8 @@
                             </div>
           
                             <hr class="my-4">
-          
+                            
+                            <!-- Sección de resumen final -->
                             <div class="d-flex justify-content-between mb-5">
                               <h5 class="text-uppercase">Total</h5>
                               <h5></h5>17.000
@@ -241,16 +259,16 @@
 </div>
     
 </body>
-<!--FOOTER-------------------------------->
 
 
+<!-- FOOTER: Pie de página -->
 <footer style="text-align: center; background-color: rgb(26, 26, 26);color: rgb(216, 216, 216);margin: 0px;padding: 10px;">
     <p>PROGRAMACION WEB 2024©</p>
   
   </footer>
 </html>
-<!-- Modal -->
-<!-- Modal -->
+
+<!-- MODAL: Perfil -->
 <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -282,7 +300,8 @@
         </div>
       </div>
       <div class="modal-footer">
-        <!--<button type="button-" class="btn btn-secondary" data-bs-dismiss="#profileModal">Close</button>-- podría usarse boton para dar acción-->
+        <!-- Botón para cerrar modal -->
+        <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="#profileModal">Close</button>-->
       </div>
     </div>
   </div>

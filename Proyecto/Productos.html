@@ -6,28 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MENUS</title>
 
+  <!-- Vinculación de Bootstrap CSS y JavaScript -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
+  <!-- Vinculación de hoja de estilo externa -->
   <link rel="stylesheet" href="Style.css">
 
 </head>
 
 <body>
-  <!--MENU-->
+  <!-- MENÚ -->
   <div style="text-align: center;">
     <a href="./Index.html"><img src="Imagenes/EL COMILON.png" alt="El comilon" style="width:150px;"></a>
   </div>
   <nav class="navbar navbar-expand-sm bg-light navbar-light" style="margin: 0px;">
     <div class="container-fluid">
+      <!-- Botón para colapsar el menú -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <!-- Menú colapsado -->
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
+          <!-- Elementos del menú -->
           <li class="nav-item">
             <a class="nav-link" href="./Productos.html">Menus</a>
           </li>
@@ -48,7 +53,7 @@
           </li>
           <li class="nav-item"><a class="nav-link" href="Carrito.html"> <img src="Imagenes/carrito.png" alt="cacerola"
                 style="height: 25px; width: 25px;margin-left: 5px;"></a>
-            <!--boton modal profile -->
+            <!-- Botón para abrir modal de perfil -->
           <li>
             <div class="container">
               <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#profileModal">Abrir
@@ -58,15 +63,16 @@
           </li>
         </ul>
       </div>
-      
+
+      <!-- Formulario de búsqueda -->
       <form class="d-flex">
         <input class="form-control me-2" type="text" placeholder="Buscar">
         <button class="btn btn-primary" type="button">Buscar</button>
       </form>
     </div>
   </nav>
-  <!--TITULO ------------------------------>
-
+  
+  <!-- TÍTULO -->
   <div class="container-fluid" style="background-color: rgb(26, 26, 26); text-align: center;">
     <div class="col" style="color: aliceblue;padding: 40px;">
       <h1 class="h1">MENUS</h1>
@@ -76,8 +82,9 @@
 
 
 
-  <!--MENU ----------------------->
+  <!-- LISTA DE MENÚS -->
   <div class="row" style="background-color: rgb(226, 226, 226); padding: 20px;">
+    <!-- Tarjeta de menú 1 -->
     <div class="card2">
       <img src="Imagenes/burger1.jpg" alt="Burger" style="width:100%;">
       <h3>Hamburguesa simple</h3>
@@ -85,6 +92,7 @@
       <p>Acompañada con papas fritas y bebida pequeña</p>
       <p><button>Agregar</button></p>
     </div>
+    <!-- Tarjeta de menú 2 -->
     <div class="card2">
       <img src="Imagenes/pizza.png" alt="Imagen producto" style="width:100%;">
       <h3>Pizza individual</h3>
@@ -92,6 +100,7 @@
       <p>Escoge un almuerzo para un día en particular</p>
       <p><button>Agregar</button></p>
     </div>
+    <!-- Tarjeta de menú 3 -->
     <div class="card2">
       <img src="Imagenes/EL COMILON.png" alt="Imagen producto" style="width:100%;">
       <h3>DIARIO</h3>
@@ -99,6 +108,7 @@
       <p>Escoge un almuerzo para un día en particular</p>
       <p><button>Agregar</button></p>
     </div>
+    <!-- Tarjeta de menú 4 -->
     <div class="card2">
       <img src="Imagenes/EL COMILON.png" alt="Imagen producto" style="width:100%;">
       <h3>DIARIO</h3>
@@ -110,9 +120,8 @@
   </div>
 
 </body>
-<!--FOOTER-------------------------------->
 
-
+<!-- PIE DE PÁGINA -->
 <footer
   style="text-align: center; background-color: rgb(26, 26, 26);color: rgb(216, 216, 216);margin: 0px;padding: 10px;">
   <p>PROGRAMACION WEB 2024©</p>
@@ -120,8 +129,8 @@
 </footer>
 
 </html>
-<!-- Modal -->
-<!-- Modal -->
+
+<!-- MODAL DE PERFIL -->
 <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -153,7 +162,8 @@
         </div>
       </div>
       <div class="modal-footer">
-        <!--<button type="button-" class="btn btn-secondary" data-bs-dismiss="#profileModal">Close</button>-- podría usarse boton para dar acción-->
+        <!-- Botón para cerrar el modal (comentado) -->
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button> -->
       </div>
     </div>
   </div>

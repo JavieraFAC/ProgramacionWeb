@@ -18,17 +18,20 @@
 </head>
 
 <body>
-  <!--MENU-->
+  <!-- MENÚ -->
   <div style="text-align: center;">
     <a href="./Index.html"><img src="Imagenes/EL COMILON.png" alt="El comilon" style="width:150px;"></a>
   </div>
   <nav class="navbar navbar-expand-sm bg-light navbar-light" style="margin: 0px;">
     <div class="container-fluid">
+      <!-- Botón para colapsar el menú -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <!-- Contenedor del menú -->
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
+          <!-- Menús de navegación -->
           <li class="nav-item">
             <a class="nav-link" href="./Productos.html">Menus</a>
           </li>
@@ -49,7 +52,7 @@
           </li>
           <li class="nav-item"><a class="nav-link" href="Carrito.html"> <img src="Imagenes/carrito.png" alt="cacerola"
                 style="height: 25px; width: 25px;margin-left: 5px;"></a>
-            <!--boton modal profile -->
+            <!-- Botón para abrir modal de perfil -->
           <li>
             <div class="container">
               <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#profileModal">Abrir
@@ -59,7 +62,7 @@
           </li>
         </ul>
       </div>
-     
+      <!-- Formulario de búsqueda -->
       <form class="d-flex">
         <input class="form-control me-2" type="text" placeholder="Buscar">
         <button class="btn btn-primary" type="button">Buscar</button>
@@ -67,7 +70,7 @@
     </div>
   </nav>
 
-  <!--TITULO ------------------------------>
+  <!-- TÍTULO -->
 
   <div class="container-fluid" style="background-color: rgb(26, 26, 26); text-align: center;">
     <div class="col" style="color: aliceblue;padding: 40px;">
@@ -77,9 +80,9 @@
   </div>
 
 
-  <!--NUESTROS PLANES ----------------------->
-
+  <!-- NUESTROS PLANES -->
   <div class="row" style="background-color: rgb(226, 226, 226); padding: 60px;">
+    <!-- Tarjeta para el plan diario -->
     <div class="card">
       <img src="Imagenes/EL COMILON.png" alt="Imagen producto" style="width:100%;">
       <h3>DIARIO</h3>
@@ -87,6 +90,7 @@
       <p>Escoge un almuerzo para un día en particular</p>
       <p><button>CONTRATAR</button></p>
     </div>
+    <!-- Tarjeta para el plan semanal -->
     <div class="card">
       <img src="Imagenes/EL COMILON.png" alt="Imagen producto" style="width:100%">
       <h3>SEMANAL</h3>
@@ -94,6 +98,7 @@
       <p>Almuerzos para cinco días a la semana</p>
       <p><button>CONTRATAR</button></p>
     </div>
+    <!-- Tarjeta para el plan mensual -->
     <div class="card">
       <img src="Imagenes/EL COMILON.png" alt="Imagen producto" style="width:100%">
       <h3>MENSUAL</h3>
@@ -109,9 +114,8 @@
 
 
 </body>
-<!--FOOTER-------------------------------->
 
-
+<!-- Pie de página -->
 <footer
   style="text-align: center; background-color: rgb(26, 26, 26);color: rgb(216, 216, 216);margin: 0px;padding: 10px;">
   <p>PROGRAMACION WEB 2024©</p>
@@ -119,7 +123,7 @@
 </footer>
 
 </html>
-<!-- Modal -->
+<!-- Modal para el perfil -->
 <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -151,7 +155,8 @@
         </div>
       </div>
       <div class="modal-footer">
-        <!--<button type="button-" class="btn btn-secondary" data-bs-dismiss="#profileModal">Close</button>-- podría usarse boton para dar acción-->
+        <!-- Podría usarse un botón para cerrar el modal -->
+        <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>-->
       </div>
     </div>
   </div>
