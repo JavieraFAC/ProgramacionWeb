@@ -17,9 +17,27 @@
 
   <!-- Vinculación de archivo de estilos -->
   <link rel="stylesheet" href="Style.css">
+
+  <!--linkeado de css Loader-->
+  <link rel="stylesheet" href="styleloader.css">
 </head>
 
-<body>
+<body class="hidden">
+
+  <!-- Animación loader -->
+  <div class="centrado" id="carga">
+    <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+  </div>
+  
   <!-- MENÚ -->
   <div style="text-align: center;">
     <a href="./Index.html"><img src="Imagenes/EL COMILON.png" alt="El comilon" style="width:150px;"></a>
@@ -151,10 +169,11 @@
 
 
   <!--importación jquery-->
-  <script src= 
-"https://code.jquery.com/jquery-3.7.1.js"> 
-    </script> 
-    <script src="main.js"></script>
+  <script src= "https://code.jquery.com/jquery-3.7.1.js"> </script> 
+  <!--importación función Nav-var-->
+  <script src="main.js"></script>
+  <!--importación funcion loader-->
+  <script src="codecarga.js"></script>
 </body>
 
 
