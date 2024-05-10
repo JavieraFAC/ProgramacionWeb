@@ -10,9 +10,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   
   <!--linkeado de css Loader-->
-  <link rel="stylesheet" href="styleloader.css">
+
 </head>
-<body style="background-color:#2f2b2a;" class="hidden">
+<body style="background-color:#FFFFFF ;" class="hidden">
   
   <!-- Animación loader -->
   <div class="centrado" id="carga">
@@ -27,207 +27,190 @@
         <div></div>
     </div>
   </div>
- 
+ <style> 
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+#formulario{
+  padding: 20px;
+
+}
+h2{
+    text-align: center;
+    text-transform: uppercase;    
+}
+p{
+    text-align: center;
+}
+
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float:right;
+    margin: 5px;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+    text-align: right;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Limpiar campos */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsivo */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+      text-align: left;
+    }
+  }
+
+
+</style>
+
+
+
+
   <!-- Encabezado con imagen -->
   <div style="text-align: center;">
-    <a href="./Index.html"><img src="Imagenes/EL COMILON.png" alt="El comilon" style="width:150px;"></a>
-  </div>
-
-  <!-- Contenido del formulario -->
-  <div class="container" style="background-color: antiquewhite; border-radius: 2%;">
-    <form class="row g-3 mt-3 needs-validation" novalidate>
-
-      <!-- Campo de correo electrónico -->
-      <div class="col-6">
-        <label for="emailInput" class="form-label">Email</label>
-        <input type="email" class="form-control" id="emailInput" placeholder="Escriba su email" required>
-        <div class="valid-feedback">
-              
-        </div>
-        <div class="invalid-feedback">
-            Debe ingresar Correo
-        </div>
-      </div>
-
-      <!-- Campo de nombre -->
-      <div class="col-6">
-        <label for="InputName" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="InputName" placeholder="Escriba su nombre" required>
-        <div class="valid-feedback">
-              
-        </div>
-        <div class="invalid-feedback">
-            Debe ingresar Nombre
-        </div>
-      </div>
-
-      <!-- Campo de número de contacto -->
-      <div class="col-6">
-        <label for="InputNumero" class="form-label">Numero de contacto</label>
-        <input type="number" class="form-control" id="InputNumero" placeholder="Escriba su Numero de contacto" required>
-        <div class="valid-feedback">
-
-        </div>
-        <div class="invalid-feedback">
-          Debe escribir su Numero
-        </div>
-      </div>
-
-      <!-- Campo de dirección -->
-      <div class="col-12">
-        <label for="InputAdress" class="form-label">Dirección</label>
-        <input type="text" class="form-control" id="InputAdress" placeholder="Dirección" required>
-        <div class="valid-feedback">
-              
-        </div>
-        <div class="invalid-feedback">
-            Debe ingresar Dirección
-        </div>
-      </div>
-
-      <!-- Campo de ciudad -->
-      <div class="col-6">
-        <label for="Inputcity" class="form-label">Ciudad</label>
-        <input type="text" class="form-control" id="Inputcity" placeholder="Ciudad" required>
-        <div class="valid-feedback">
-              
-        </div>
-        <div class="invalid-feedback">
-            Debe ingresar Ciudad
-        </div>
-      </div>
-
-      <!-- Campo de código postal con popover -->
-      <div class="row mb-3">
-        <div class="col-7">
-          <label for="InputPostalCode" class="form-label">Código Postal</label>
-
-            <div class="input-group">
-              <input type="text" class="form-control" id="InputPostalCode" placeholder="Escriba su código postal" required>
-              <div class="valid-feedback">
-              
-              </div>
-              <div class="invalid-feedback">
-                  Debe ingresar Código Postal
-              </div>
-              <!-- Botón con popover -->
-                <a data-bs-toggle="popover" title="Código Postal"
-                  data-bs-html="true"
-                  data-bs-auto-close="outside"
-                  data-bs-content="¿No sabe su código postal? Visite el siguiente link: <a href='https://www.correos.cl/' target='_blank' >sitio web</a>"
-                  class="btn btn-warning ms-2" href="javascript:void(0);">¿?
-                </a>
-            </div>
-        </div>
-      </div>
-
-      <!-- Campo de selección de país -->
-      <div class="row mb-3">
-        <div class="col-4">
-          <label for="InputCountry" class="form-label">Selecciona un País</label>
-          <select class="form-control" id="InputCountry" required>
-            <option value="" disabled selected>País</option>
-            <option value="Argentina">Argentina</option>
-            <option value="Bolivia">Bolivia</option>
-            <option value="Chile">Chile</option>
-            <option value="Colombia">Colombia</option>
-            <option value="Ecuador">Ecuador</option>
-            <option value="España">España</option>
-            <option value="Estados Unidos">Estados Unidos</option>
-            <option value="México">México</option>
-            <option value="Perú">Perú</option>
-            <option value="Uruguay">Uruguay</option>
-            <option value="Venezuela">Venezuela</option>
-          </select>
-          <div class="valid-feedback">
-              
-          </div>
-          <div class="invalid-feedback">
-              Debe seleccionar País
-          </div>
-        </div>
-      </div>
-
-      <!-- Campo de texto para describir la necesidad -->
-      <div class="mb-3">
-        <label for="InputContexto" class="form-label">Describa su necesidad</label>
-        <textarea class="form-control" id="InputContexto" rows="3"></textarea>
-      </div>
-               
-      <!-- Checkbox para aceptar términos y condiciones -->
-      <div class="col-12">
-        <div class="form-chek">            
-          <input type="checkbox" id="chekTerms" class="form-chek-input" required>
-            <label for="chekTerms" class="form-check-label">Acepto los Términos y condiciones</label>
-            <div class="valid-feedback">
-              
-            </div>
-            <div class="invalid-feedback">
-              ¡Debe aceptar los Términos y condiciones!
-            </div>
-        </div>
-      </div>
-
-      <!-- Botón para registrar el formulario -->
-      <div class="col-12">
-        <button id="btnRegistrar" type="submit" class="btn btn-primary">
-          Registrar formulario
-        </button>
-      </div>
-    </form>
+    <a href="./Index.html"><img src="Imagenes/EL COMILON.png" alt="El comilon" style="width:150px; padding-bottom: 20px;"></a>
   </div>
 
 
 
+  <!-- TITULO ------------------------------------->
 
-  <!--Script para validaciones con bootstrap-->
-  <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (() => {
-      'use strict'
+  <div class="container">
+    <h2>Formulario de contacto</h2>
+    <p>Te gustaría trabajar con nosotros ?</p>
+    <hr>
 
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      const forms = document.querySelectorAll('.needs-validation')
 
-      // Loop over them and prevent submission
-      Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
+<!----------COMIENZO FORMULARIO---------------->
+  <form id="formulario" action="pagina.php" method="post">
+<!--NOMBRE---------------------------->
+    <div class="row">
+      <div class="col-25">
+        <label for="nombre">Nombre : </label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" >
+      </div>
+    </div>
+<!--APELLIDO---------------------------->
+    <div class="row">
+      <div class="col-25">
+        <label for="apellido">Apellido : </label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" >
+      </div>
+    </div>
+<!--CORREO---------------------------->
+    <div class="row">
+        <div class="col-25">
+          <label for="correo">Correo : </label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="correo" name="correo" placeholder="Ingresa tu correo" >
+        </div>
+      </div>
+<!--SECTOR---------------------------->
+    <div class="row">
+      <div class="col-25">
+        <label for="sector">Sector : </label>
+      </div>
+      <div class="col-75">
+        <select id="sector" name="sector" >
+            <option value="">Selecciona ubicación</option>           
+          <option value="vinadelmar">Viña del Mar</option>
+          <option value="valpo">Valparaiso</option>
+          <option value="quilpue">Quilpue</option>
+          <option value="concon">Concon</option>
+        </select>
+      </div>
+    </div>
+<!--COMENTARIOS---------------------------->
+    <div class="row">
+      <div class="col-25">
+        <label for="comentario">Comentarios : </label>
+      </div>
+      <div class="col-75">
+        <textarea id="comentario" name="comentario" placeholder="Comentarios.." style="height:100px"></textarea>
+      </div>
+    </div>
+<!--terminos y condiciones ------------------->
+<div class="row">
+  <div class="col-25">
+  </div>
+  <div class="col-75">
+    <input type="checkbox" id="terminos" name="terminos">
+    <label for="terminos" class="labelCheck">Acepto los términos y condiciones</label>
+</div>
+</div>
 
-          form.classList.add('was-validated')
-        }, false)
-      })
-    })()
-  </script>
-        
-  <!-- Scripts de Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<!--BOTON---------------------------->
+    <div class="row">
+      <input type="submit" value="Enviar solicitud">
+    </div>
+  </form>
 
-  <!-- Inicialización de popovers -->
-  <script>
-  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-  var popoverList = popoverTriggerList.map(function (popoverTriggerE1) {
-  return new bootstrap.Popover(popoverTriggerE1)
-  })
+
+
+
+
+
+
+
+
+  <!--Script para validaciones con bootstrap----------------------->
   
-  </script>
-
-  <!--importación jquery-->
-  <script src= "https://code.jquery.com/jquery-3.7.1.js"></script> 
-  <!--importación función Nav-var-->
-  <script src="main.js"></script>
-  <!--importación funcion loader-->
-  <script src="codecarga.js"></script>
-
 </body>
-<footer
-  style="text-align: center; background-color: rgb(26, 26, 26);color: rgb(216, 216, 216);margin: 0px;padding: 10px;">
-  
-<p>PROGRAMACION WEB 2024©</p>
 
-</footer>
+<!--Java Script-->
+<script src="validaciones.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 </html>
