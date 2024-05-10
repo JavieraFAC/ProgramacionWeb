@@ -21,21 +21,9 @@
   <link rel="stylesheet" href="styleloader.css">
 </head>
 
-<body class="hidden">
+<body >
 
-  <!-- Animación loader -->
-  <div class="centrado" id="carga">
-    <div class="lds-roller">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-  </div>
+ 
 
   <!--MENU-->
   <div style="text-align: center;">
@@ -88,6 +76,9 @@
         <button type="submit" class="btn btn-secondary"><a href="Register.html"> registrarse</a></button>
       </form>
     </div>
+    
+     <!-- contenedor de modal  -->
+  <div id="modal-container"></div>
 
   </div>
   <!--importación jquery-->
@@ -109,43 +100,3 @@
 </html>
 
 
-<!-- Modal de perfil -->
-<div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <!-- Cuerpo del modal -->
-      <div class="modal-body">
-        <div class="container d-flex justify-content-center align-items-center">
-          <div class="card">
-            <div class="upper">
-              <img src="https://i.imgur.com/Qtrsrk5.jpg" class="img-fluid">
-            </div>
-            <div class="user text-center">
-              <div class="profile">
-                <img src="https://i.imgur.com/JgYD2nQ.jpg" class="rounded-circle" width="80">
-              </div>
-              <h4 class="mb-0">Juan Perez</h4>
-              <span class="text-muted d-block mb-2">Plan Semanal</span>
-              <button class="btn btn-primary btn-sm follow">Ver perfil</button>
-              <div class="d-flex justify-content-between align-items-center mt-4 px-4">
-                <div class="stats">
-                  <h6 class="mb-0">Almuerzos</h6>
-                  <span>7</span>
-                </div>
-                <div class="stats">
-                  <h6 class="mb-0">Saldo</h6>
-                  <span>$14.123</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Pie de página del modal -->
-      <div class="modal-footer">
-        <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="#profileModal">Cerrar</button>-->
-        <!-- Podría usarse un botón para dar acción -->
-      </div>
-    </div>
-  </div>
-</div>

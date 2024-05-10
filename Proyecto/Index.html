@@ -23,27 +23,29 @@
 </head>
 
 <body class="hidden">
-
   <!-- Animación loader -->
   <div class="centrado" id="carga">
     <div class="lds-roller">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+
+      <div>W</div>
+      <div>E</div>
+      <div>L</div>
+      <div>C</div>
+
+      <div>O</div>
+      <div>M</div>
+      <div>E</div>
+      <div>!</div>
     </div>
   </div>
-  
+
+
   <!-- MENÚ -->
   <div style="text-align: center;">
     <a href="./Index.html"><img src="Imagenes/EL COMILON.png" alt="El comilon" style="width:150px;"></a>
   </div>
   <nav class="navbar navbar-expand-sm bg-light navbar-light" style="margin: 0px;">
-    
+
   </nav>
   <!-- TÍTULO -->
 
@@ -166,10 +168,21 @@
     <a href="Formulario.html"><button class="irProducto"><span>TRABAJA CON NOSOTROS </span></button></a>
   </div>
   <!-- FIN LLAMADO A LA ACCIÓN -->
+  <!-- Cargar API UBICACION -->
+  <div><h2 class="h2 " style="padding-top: 20px;">encuentranos en </h2></div>
+  <div id="map" style="	height: 500px; width: 100%;"></div>
+  <script src="main.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+
+  <!-- contenedor de modal  -->
+  <div id="modal-container"></div>
+
+
 
 
   <!--importación jquery-->
-  <script src= "https://code.jquery.com/jquery-3.7.1.js"> </script> 
+  <script src="https://code.jquery.com/jquery-3.7.1.js"> </script>
   <!--importación función Nav-var-->
   <script src="main.js"></script>
   <!--importación funcion loader-->
@@ -181,47 +194,10 @@
 <!-- FOOTER -->
 <footer
   style="text-align: center; background-color: rgb(26, 26, 26);color: rgb(216, 216, 216);margin: 0px;padding: 10px;">
-  
-<p>PROGRAMACION WEB 2024©</p>
+
+  <p>PROGRAMACION WEB 2024©</p>
 
 </footer>
 
 </html>
 <!-- Modal de perfil -->
-<div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="container d-flex justify-content-center align-items-center">
-          <div class="card">
-            <div class="upper">
-              <img src="https://i.imgur.com/Qtrsrk5.jpg" class="img-fluid">
-            </div>
-            <div class="user text-center">
-              <div class="profile">
-                <img src="https://i.imgur.com/JgYD2nQ.jpg" class="rounded-circle" width="80">
-              </div>
-              <h4 class="mb-0">Juan Perez</h4>
-              <span class="text-muted d-block mb-2">Plan Semanal</span>
-              <button class="btn btn-primary btn-sm follow">Ver perfil</button>
-              <div class="d-flex justify-content-between align-items-center mt-4 px-4">
-                <div class="stats">
-                  <h6 class="mb-0">Almuerzos</h6>
-                  <span>7</span>
-                </div>
-                <div class="stats">
-                  <h6 class="mb-0">Saldo</h6>
-                  <span>$14.123</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <!-- Podría usarse un botón para cerrar modal -->
-        <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>-->
-      </div>
-    </div>
-  </div>
-</div>
