@@ -36,10 +36,99 @@
     </a>
   </div>
 
-  <!-- Navbar -->
+  <!--NAV-VAR-->
   <nav class="navbar navbar-expand-sm bg-light navbar-light" style="margin: 0px;">
-  
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <!-- Elemento de menú: Menus -->
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'Productos'%}">Menus</a>
+          </li>
+          <!-- Elemento de menú con submenú: Planes -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Planes </a>
+            <ul class="dropdown-menu">
+              <!-- Elemento de submenú: Plan Diario -->
+              <li><a class="dropdown-item" href="{%url 'Planes'%}">Plan Diario </a></li>
+              <!-- Elemento de submenú: Plan Semanal -->
+              <li><a class="dropdown-item" href="{%url 'Planes'%}">Plan Semanal</a></li>
+              <!-- Elemento de submenú: Plan Mensual -->
+              <li><a class="dropdown-item" href="{%url 'Planes'%}">Plan Mensual</a></li>
+            </ul>
+          </li>
+          <!-- Elemento de menú: Restaurantes -->
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'Retaurantes'%}">Restaurantes</a>
+          </li> 
+        </li>
+        <!-- Elemento de menú: Cuenta -->
+        <li class="nav-item">
+          <a class="nav-link" href="{%url 'Cuenta'%}">Cuenta</a>
+        </li> 
+        <!-- Elemento de menú con imagen de carrito -->
+        <li class="nav-item" ><a class="nav-link" href="{%url 'Carrito'%}" > <img src="{%static 'img/carrito.png'%}" alt="cacerola" style="height: 25px; width: 25px;margin-left: 5px;"></a> 
+          <!-- Botón para abrir el modal del perfil --> 
+          <li>
+            <div class="container">
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#profileModal">Abrir
+                Profile</button>
+            </div>
+          </li>
+        </li>
+        </ul>
+      </div>
+    
+      <!-- Formulario de búsqueda -->
+      <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Buscar">
+        <button class="btn btn-primary" type="button">Buscar</button>
+      </form>
+    </div>
   </nav>
+
+  <!--MODAL-->
+  <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container d-flex justify-content-center align-items-center">
+          <div class="card">
+            <div class="upper">
+              <img src="https://i.imgur.com/Qtrsrk5.jpg" class="img-fluid">
+            </div>
+            <div class="user text-center">
+              <div class="profile">
+                <img src="https://i.imgur.com/JgYD2nQ.jpg" class="rounded-circle" width="80">
+              </div>
+              <h4 class="mb-0">Juan Perez</h4>
+              <span class="text-muted d-block mb-2">Plan Semanal</span>
+              <button class="btn btn-primary btn-sm follow">Ver perfil</button>
+              <div class="d-flex justify-content-between align-items-center mt-4 px-4">
+                <div class="stats">
+                  <h6 class="mb-0">Almuerzos</h6>
+                  <span>7</span>
+                </div>
+                <div class="stats">
+                  <h6 class="mb-0">Saldo</h6>
+                  <span>$14.123</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <!-- Podría usarse un botón para cerrar el modal -->
+        <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>-->
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--CIERRE NAV-VAR-->
 
   <!-- TÍTULO -->
   <div class="container-fluid" style="background-color: rgb(26, 26, 26); text-align: center;">
@@ -88,7 +177,7 @@
   <!--importación jquery-->
   <script src= "{%static 'scripts/jquery.js' %}"> </script>
   <!--importación función Nav-var-->
-  <script src="{%static 'scripts/main.js' %}"></script>
+  <!--<script src="{%static 'scripts/main.js' %}"></script>-->
   <!--importación funcion loader-->
   <script src="{%static 'scripts/codecarga.js' %}"></script>
 </body>
