@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     formulario.addEventListener('submit', function (evento) {
         evento.preventDefault(); // Previene el envío del formulario para poder validarlo con Javascript
         // Datos personales
+        const rut = document.getElementById('rut').value;
         const nombre = document.getElementById('nombre').value;
         const apellido = document.getElementById('apellido').value;
         const correo = document.getElementById('correo').value;
@@ -15,6 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         // Validación de los campos
+        if (rut.trim() === ''){
+            alert("Por favor, escribe tu rut");
+            return;
+        }
+
         if (nombre.trim() === '') {
             alert("Por favor, escribe tu nombre");
              return;
