@@ -12,6 +12,6 @@ urlpatterns = [
     path('Cuenta', views.Cuenta, name='Cuenta'),
     path('Planes', views.Planes, name='Planes'),
     path('Formulario', views.Formulario, name='Formulario'),
-    path('Retaurantes', views.Retaurantes, name='Retaurantes'),
+    path('Restaurantes', views.Restaurantes, name='Restaurantes'),
     
 ]

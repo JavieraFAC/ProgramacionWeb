@@ -31,6 +31,6 @@ def Formulario(request):
     context={}
     return render(request, 'restaurant/Formulario.html', context)
 
-def Retaurantes(request):
+def Restaurantes(request):
     context={}
-    return render(request, 'restaurant/Retaurantes.html', context)
+    return render(request, 'restaurant/Restaurantes.html', context)
