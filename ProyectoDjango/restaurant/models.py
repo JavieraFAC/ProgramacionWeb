@@ -23,3 +23,24 @@ class Alumno(models.Model):
 
     def __str__(self):
         return str(self.nombre)+" "+str(self.apellido_paterno)   
+    
+# Variable global para el select del formulario
+
+SECTOR_CHOICES = [
+    ('vinadelmar', 'Viña del Mar'),
+    ('valpo', 'Valparaíso'),
+    ('quilpue', 'Quilpué'),
+    ('concon', 'Concón'),
+]
+
+class Contacto(models.Model):
+    rut             = models.CharField(max_length=30)
+    nombre          = models.CharField(max_length=30)
+    apellido        = models.CharField(max_length=30)
+    correo          = models.CharField(unique=True, max_length=100, blank=True, null=True)
+    sector          = models.CharField(max_length=50, choices=SECTOR_CHOICES)
+    comentario        = models.CharField(max_length=250)
+
+    def __str__(self):
+        return f'{self.nombre} {self.apellido}'
+
