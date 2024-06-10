@@ -121,6 +121,17 @@ p{
 
 <!----------COMIENZO FORMULARIO---------------->
   <form id="formulario" action="pagina.php" method="post">
+      {% csrf_token %}
+      {{ form.as_table }}
+<!--RUT------------------------------->
+<div class="row">
+  <div class="col-25">
+    <label for="rut">Rut:</label>
+  </div>
+  <div class="col-75">
+    <input type="text" id="rut" name="rut" placeholder="Ingresa tu RUT">
+  </div>
+</div>
 <!--NOMBRE---------------------------->
     <div class="row">
       <div class="col-25">
@@ -187,14 +198,6 @@ p{
       <input type="submit" value="Enviar solicitud">
     </div>
   </form>
-
-
-
-
-
-
-
-
 
   <!--Script para validaciones con bootstrap----------------------->
   
