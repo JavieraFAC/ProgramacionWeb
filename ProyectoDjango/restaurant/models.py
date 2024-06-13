@@ -34,7 +34,7 @@ SECTOR_CHOICES = [
 ]
 
 class Contacto(models.Model):
-    rut             = models.CharField(max_length=30)
+    rut             = models.CharField(primary_key=True, max_length=10)
     nombre          = models.CharField(max_length=30)
     apellido        = models.CharField(max_length=30)
     correo          = models.CharField(unique=True, max_length=100, blank=True, null=True)
@@ -42,5 +42,5 @@ class Contacto(models.Model):
     comentario        = models.CharField(max_length=250)
 
     def __str__(self):
-        return f'{self.nombre} {self.apellido}'
+        return self.nombre
 

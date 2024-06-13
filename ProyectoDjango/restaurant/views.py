@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-from .models import Alumno, Genero
+from .models import Alumno, Genero, Contacto
+from .forms import ContactoForm
+
 # Create your views here.
 
 def Index(request):
@@ -28,7 +30,14 @@ def Planes(request):
     return render(request, 'restaurant/Planes.html', context)
 
 def Formulario(request):
-    context={}
+    if request.method == 'POST':
+        form = ContactoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('Index')
+    else:
+        form = ContactoForm()
+    context= {'form' : form}
     return render(request, 'restaurant/Formulario.html', context)
 
 def Restaurantes(request):

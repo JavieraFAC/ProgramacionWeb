@@ -5,3 +5,4 @@ from.models import Genero, Alumno, Contacto
 admin.site.register(Genero)
 admin.site.register(Alumno)
 admin.site.register(Contacto)
+
