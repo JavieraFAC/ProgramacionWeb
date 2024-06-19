@@ -21,6 +21,21 @@
     <a href="{% url 'Index' %}"><img src="{%static 'img/EL COMILON.png'%}" alt="El comilon" style="width:150px;"></a>
   </div>
 
+  <div style="text-align: right; margin-right: 100px; color: rgb(72, 32, 214);">
+    {% if user.is_authenticated %}
+
+    Hola {{ user.username }} &nbsp; &nbsp;<a href="{% url 'cerrar_sesion' %}" style="color: red;">Cerrar sesión</a>
+  
+    {% else %}
+  
+    <a href="{% url 'logear' %}">Login</a>&nbsp; &nbsp; <a href="{% url 'Autenticacion' %}">Regístrate</a>
+  
+    {% endif %}
+
+  </div>
+
+
+
   <!--NAV-VAR-->
   <nav class="navbar navbar-expand-sm bg-light navbar-light" style="margin: 0px;">
     <div class="container-fluid">
