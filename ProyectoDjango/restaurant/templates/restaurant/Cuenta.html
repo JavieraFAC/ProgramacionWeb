@@ -1,0 +1,46 @@
+{% extends 'restaurant/base.html'%}
+
+{% block content %}
+<!-- TÍTULO -->
+<div class="container-fluid" style="background-color: rgb(26, 26, 26); text-align: center;">
+  <div class="col" style="color: aliceblue;padding: 40px;">
+    <h1>INICIA SESIÓN</h1>
+  </div>
+  
+
+  <!-- Formulario de inicio de sesión -->
+  <div clas="container-fluid" style="width: fit-content; margin-left: 42%;margin-bottom: 20%;margin-top: 5%;">
+    <form action="/action_page.php" class="was-validated">
+      <div class="mb-3 mt-3">
+        <!-- Campo de texto para el nombre de usuario -->
+        <label for="uname" class="form-label">Username:</label>
+        <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+        <div class="valid-feedback"></div>
+        <div class="invalid-feedback">Campo vacío.</div>
+      </div>
+
+      <!-- Campo de texto para la contraseña -->
+      <div class="mb-3">
+        <label for="pwd" class="form-label">Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+        <div class="valid-feedback"></div>
+        <div class="invalid-feedback">Campo vacío.</div>
+      </div>
+
+      <!-- Casilla de verificación para comprobar si el usuario es humano -->
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required>
+        <label class="form-check-label" for="myCheck">Eres humano ?.</label>
+        <div class="valid-feedback">Soy humano.</div>
+        <div class="invalid-feedback">No soy humano.</div>
+      </div>
+
+      <!-- Botones para ingresar o registrarse -->
+      <button type="submit" class="btn btn-secondary" style="color: aliceblue;"><a
+          href="main.html">Ingresar</a></button>
+      <button type="submit" class="btn btn-secondary"><a href="{% url 'Register'%}"> registrarse</a></button>
+    </form>
+  </div>
+</div>
+{% endblock %}
+

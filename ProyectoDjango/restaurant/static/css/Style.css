@@ -1,0 +1,175 @@
+body{
+  background-image: url('{% static "img/potatos.jpg" %}');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.h1{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size:xxx-large;
+  text-align: center;
+  text-transform: uppercase;
+  color: #c13910;
+}
+
+.h2{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size:xx-large;
+  text-align: center;
+  text-transform: uppercase;
+  color: #c13910;
+}
+
+.h3{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size:x-large;
+  text-align: center;
+  text-transform: uppercase;
+  color: #2f2b2a;
+
+
+}
+
+.p{
+  padding: auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+
+}
+
+.sobreNosotros {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: 300px;
+  text-align: center;
+  color: rgb(18, 86, 86);
+  margin: 20px;
+}
+
+.fotos {
+  display: grid;
+  background-color: #2f2b2a;
+  grid-template-columns: 50% 50%;
+  height: 70%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.restaurante {
+  display: grid;
+  background-color: #2f2b2a;
+  grid-template-columns: 50% 50%;
+  height: 70%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    align-content: center;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    border-radius: 20px;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.4;
+  }
+
+
+  .irProducto {
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  
+  .irProducto span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .irProducto span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .irProducto:hover span {
+    padding-right: 25px;
+  }
+  
+  .irProducto:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+  .card2 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color:rgb(240, 240, 240);
+    border-radius: 20px;
+    width: 250px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    align-content: center;
+  }
+
+  .card2 button {
+    border: none;
+    border-radius: 20px;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #a42727;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card2 button:hover {
+    opacity: 0.4;
+  }
+

@@ -1,0 +1,69 @@
+{% extends 'restaurant/base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="container-fluid" style="background-color: rgb(26, 26, 26); text-align: center; padding: 40px;">
+  <h1 class="text-white">MENUS</h1>
+  <p class="text-white">Almuerzos disponibles</p>
+</div>
+
+<div class="container mt-5">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
+    <!-- Tarjeta de menú 1 -->
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="{% static 'img/burger1.jpg' %}" class="card-img-top" alt="Burger">
+        <div class="card-body">
+          <h3 class="card-title">Hamburguesa simple</h3>
+          <p class="card-text">$5.990</p>
+          <p class="card-text">Acompañada con papas fritas y bebida pequeña</p>
+          <button class="btn btn-primary">Agregar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de menú 2 -->
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="{% static 'img/pizza.png' %}" class="card-img-top" alt="Pizza">
+        <div class="card-body">
+          <h3 class="card-title">Pizza individual</h3>
+          <p class="card-text">$5.990</p>
+          <p class="card-text">Escoge un almuerzo para un día en particular</p>
+          <button class="btn btn-primary">Agregar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de menú 3 -->
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="{% static 'img/EL COMILON.png' %}" class="card-img-top" alt="Diario">
+        <div class="card-body">
+          <h3 class="card-title">Diario</h3>
+          <p class="card-text">$5.990</p>
+          <p class="card-text">Escoge un almuerzo para un día en particular</p>
+          <button class="btn btn-primary">Agregar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de menú 4 -->
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="{% static 'img/EL COMILON.png' %}" class="card-img-top" alt="Diario">
+        <div class="card-body">
+          <h3 class="card-title">Diario</h3>
+          <p class="card-text">$5.990</p>
+          <p class="card-text">Escoge un almuerzo para un día en particular</p>
+          <button class="btn btn-primary">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
