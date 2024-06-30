@@ -1,0 +1,2 @@
+1)pip install django-crispy-forms
+2)pip install crispy-bootstrap4
