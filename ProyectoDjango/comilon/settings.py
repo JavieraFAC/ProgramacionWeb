@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'autenticacion',
     'crispy_forms',
     'crispy_bootstrap4',
+    'captcha',
+    'django_recaptcha',
 ]
 
 MIDDLEWARE = [
@@ -117,8 +119,8 @@ EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST='smtp.office365.com'
 EMAIL_USE_TLS=True
 EMAIL_PORT=587
-EMAIL_HOST_USER="ren@live.cl"
-EMAIL_HOST_PASSWORD="Verano11"
+EMAIL_HOST_USER="comiloncitox2@outlook.com"
+EMAIL_HOST_PASSWORD="comilon2024"
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -140,6 +142,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+RECAPTCHA_PUBLIC_KEY = '6LesnwgqAAAAAEbBQARz6iSvy1oVXa5J4lGnUoZE'
+RECAPTCHA_PRIVATE_KEY = '6LesnwgqAAAAAMVExxpvu-hGd3SMvVo4gQQ9GXDP'
+
+
+#RECAPTCHA_PUBLIC_KEY = '6LcSlQgqAAAAAHCnRM2C-1tMRrrUmNOSCTjTDRn7'
+#RECAPTCHA_PRIVATE_KEY = '6LcSlQgqAAAAAGfb-gc7yLzzlP86dkCrTkVBRo39'
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 
