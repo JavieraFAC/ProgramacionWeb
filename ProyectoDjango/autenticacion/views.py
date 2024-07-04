@@ -4,10 +4,11 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from .forms import CustomUserCreationForm
 
 # Create your views here.
 
-class VRegistro(View):
+'''class VRegistro(View):
 
     def get(self, request):
         form=UserCreationForm()
@@ -28,7 +29,7 @@ class VRegistro(View):
                 messages.error(request, form.error_messages[msg])
                 
             return render(request, "registro/registro.html",{"form":form})
-        
+        '''
 def cerrar_sesion(request):
     logout(request)
 
@@ -51,3 +52,25 @@ def logear(request):
 
     form=AuthenticationForm()
     return render(request, "login/login.html",{"form":form})
+
+
+
+class VRegistro(View):
+
+    def get(self, request):
+        form = CustomUserCreationForm()  # Usa el formulario personalizado
+        return render(request, "registro/registro.html", {"form": form})
+    
+    def post(self, request):
+        form = CustomUserCreationForm(request.POST)  # Usa el formulario personalizado
+
+        if form.is_valid():
+            usuario = form.save()
+            login(request, usuario)
+            messages.success(request, '¡Registro exitoso! Bienvenido.')
+            return redirect('Index')
+        else:
+            for msg in form.error_messages:
+                messages.error(request, form.error_messages[msg])
+                
+            return render(request, "registro/registro.html", {"form": form})

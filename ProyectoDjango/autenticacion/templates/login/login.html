@@ -13,27 +13,24 @@
     </div>
 </div>
 
+<form method="post" action="" class="container mt-5" style="max-width: 600px; color: white; margin-bottom: 2%;">
+  {% csrf_token %}
 
-<form method="post" action="" style="color: white;">
-
-
-    {% csrf_token %}
-
-    <div style="width: 75%; margin: auto; background-color: rgb(26, 26, 26); border-radius: 10px;">
-
+  <div class="card bg-dark text-white p-4 shadow-sm rounded">
       {% if messages %}
-
-      {% for mensaje in messages %}
-
-      <span class="alert alert-{{mensaje.tags}}">{{mensaje}}</span>
-
-      {% endfor %}
-
+          {% for mensaje in messages %}
+              <div class="alert alert-{{ mensaje.tags }}" role="alert">
+                  {{ mensaje }}
+              </div>
+          {% endfor %}
       {% endif %}
-      </br></br>
-    {{ form|crispy }}
-    <button type="submit" class="btn btn-success">Ingresar</button>
-    </div>
+
+      {{ form|crispy }}
+
+      <div class="text-center mt-4">
+          <button type="submit" class="btn btn-success w-100">Ingresar</button>
+      </div>
+  </div>
 </form>
 
 {% endblock %}
