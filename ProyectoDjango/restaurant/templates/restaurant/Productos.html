@@ -4,66 +4,66 @@
 
 {% load static %}
 
-<div class="container-fluid" style="background-color: rgb(26, 26, 26); text-align: center; padding: 40px;">
-  <h1 class="text-white">MENUS</h1>
-  <p class="text-white">Almuerzos disponibles</p>
-</div>
-
 <div class="container mt-5">
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
-    <!-- Tarjeta de menú 1 -->
-    <div class="col mb-4">
-      <div class="card h-100">
-        <img src="{% static 'img/burger1.jpg' %}" class="card-img-top" alt="Burger">
-        <div class="card-body">
-          <h3 class="card-title">Hamburguesa simple</h3>
-          <p class="card-text">$5.990</p>
-          <p class="card-text">Acompañada con papas fritas y bebida pequeña</p>
-          <button class="btn btn-primary">Agregar</button>
-        </div>
+  <h2>Pedidos Anteriores</h2>
+  {% if pedidos %}
+      <div class="accordion" id="accordionPedidos">
+          {% for pedido_info in pedidos %}
+          {% with pedido=pedido_info.pedido total_pedido=pedido_info.total %}
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="heading{{ pedido.id }}">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ pedido.id }}" aria-expanded="false" aria-controls="collapse{{ pedido.id }}">
+                      Pedido #{{ pedido.id }} - {{ pedido.created_at }}
+                  </button>
+              </h2>
+              <div id="collapse{{ pedido.id }}" class="accordion-collapse collapse" aria-labelledby="heading{{ pedido.id }}" data-bs-parent="#accordionPedidos">
+                  <div class="accordion-body">
+                      <div class="table-container">
+                          <table class="table table-bordered">
+                              <thead>
+                                  <tr>
+                                      <th>Producto</th>
+                                      <th>Cantidad</th>
+                                      <th>Precio</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  {% for linea in pedido.lineapedido_set.all %}
+                                  <tr>
+                                      <td>{{ linea.producto.nombre }}</td>
+                                      <td>{{ linea.cantidad }}</td>
+                                      <td>${{ linea.producto.precio }}</td>
+                                  </tr>
+                                  {% endfor %}
+                              </tbody>
+                          </table>
+                      </div>
+                      <!-- Mostrar el total del pedido -->
+                      <p><strong>Total del Pedido: </strong>${{ total_pedido }}</p>
+                  </div>
+              </div>
+          </div>
+          {% endwith %}
+          {% endfor %}
       </div>
-    </div>
-
-    <!-- Tarjeta de menú 2 -->
-    <div class="col mb-4">
-      <div class="card h-100">
-        <img src="{% static 'img/pizza.png' %}" class="card-img-top" alt="Pizza">
-        <div class="card-body">
-          <h3 class="card-title">Pizza individual</h3>
-          <p class="card-text">$5.990</p>
-          <p class="card-text">Escoge un almuerzo para un día en particular</p>
-          <button class="btn btn-primary">Agregar</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tarjeta de menú 3 -->
-    <div class="col mb-4">
-      <div class="card h-100">
-        <img src="{% static 'img/EL COMILON.png' %}" class="card-img-top" alt="Diario">
-        <div class="card-body">
-          <h3 class="card-title">Diario</h3>
-          <p class="card-text">$5.990</p>
-          <p class="card-text">Escoge un almuerzo para un día en particular</p>
-          <button class="btn btn-primary">Agregar</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tarjeta de menú 4 -->
-    <div class="col mb-4">
-      <div class="card h-100">
-        <img src="{% static 'img/EL COMILON.png' %}" class="card-img-top" alt="Diario">
-        <div class="card-body">
-          <h3 class="card-title">Diario</h3>
-          <p class="card-text">$5.990</p>
-          <p class="card-text">Escoge un almuerzo para un día en particular</p>
-          <button class="btn btn-primary">Agregar</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% else %}
+      <p>No tienes pedidos anteriores.</p>
+  {% endif %}
 </div>
+
+<style>
+    .accordion-button:focus {
+        outline: none;
+    }
+    .accordion-item {
+        margin-bottom: 10px;
+    }
+    /* Estilos para permitir el scroll en el contenedor de la tabla */
+    .table-container {
+        max-height: 300px; /* ajusta esta altura según tus necesidades */
+        overflow-y: auto;
+    }
+</style>
 {% endblock %}
 
 

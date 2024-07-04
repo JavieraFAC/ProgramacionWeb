@@ -1,14 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Confirmación de Pedido</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .content {
+            padding: 20px;
+            color: #333333;
+        }
+
+        .content p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .order-details {
+            margin-top: 20px;
+            border-top: 1px solid #eeeeee;
+            padding-top: 10px;
+        }
+
+        .order-details p {
+            margin: 5px 0;
+        }
+
+        .order-details span {
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .order-lines {
+            margin-top: 20px;
+            padding-top: 10px;
+        }
+
+        .order-lines ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .order-lines li {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 5px 0;
+            border: 1px solid #dddddd;
+        }
+
+        .footer {
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #eeeeee;
+            text-align: center;
+            color: #777777;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    hola {{nombreusuario}} <br>
-    N de pedido: {{pedido.id}} <br>
-    email del usaurio {{emailusuario}} <br>
-    lineas de pedido {{lineas_pedido}}
+    <div class="container">
+    <div class="header">
+        ¡Gracias por tu pedido, {{ nombreusuario }}!
+    </div>
+    <div class="content">
+        <p>Hola {{ nombreusuario }},</p>
+        <p>Estamos encantados de informarte que tu pedido ha sido procesado con éxito. A continuación, encontrarás los detalles de tu compra:</p>
+        <div class="order-details">
+            <p>Número de pedido: <span>{{ pedido.id }}</span></p>
+            <p>Email de contacto: <span>{{ emailusuario }}</span></p>
+        </div>
+        <div class="order-lines">
+            <p>Detalles del pedido:</p>
+            <ul>
+                {% for linea in lineas_pedido %}
+                    <li>
+                        Producto: <strong>{{ linea.producto.nombre }}</strong><br>
+                        Cantidad: <strong>{{ linea.cantidad }}</strong><br>
+                        Precio unitario: <strong>{{ linea.producto.precio|floatformat:2 }} $</strong><br>
+                        Precio total: <strong>{{ linea.precio_total|floatformat:2 }} $</strong>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <p>El total de tu pedido es:
+            <strong>{{ total_pedido|floatformat:2 }} $</strong>
+        </p>
+    </div>
+    <div class="footer">
+        <p>¡Gracias por comprar con nosotros!</p>
+        <p>Esperamos verte de nuevo pronto.</p>
+    </div>
+</div>
 </body>
 </html>

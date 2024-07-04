@@ -11,6 +11,7 @@ from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from django.core.mail import send_mail
 
+
 # Create your views here.
 
 def Index(request):
@@ -127,7 +128,7 @@ def enviar_mail(**kwargs):
         })
 
     mensaje_texto=strip_tags(mensaje)
-    from_email="ren@live.cl"
+    from_email="comiloncitox2@outlook.com"
     #to=kwargs.get("email_usuario")
     to="vejarcfelipea@gmail.com"
     send_mail(asunto,mensaje_texto,from_email,[to], html_message=mensaje)
@@ -138,3 +139,29 @@ def some_view(request):
     is_admin = request.user.is_staff
     context = {'is_admin': is_admin}
     return render(request, 'your_template.html', context)    
+
+@login_required
+def some_view2(request):
+    context = {'is_admin': request.user.is_staff, 'is_not_admin': not request.user.is_staff}
+    return render(request, 'your_template.html', context)
+
+
+# views.py
+@login_required(login_url='/autenticacion/logear')
+def Productos(request):
+    pedidos = Pedido.objects.filter(user=request.user).prefetch_related('lineapedido_set__producto').order_by('-created_at')
+    
+    # Crear una lista para almacenar cada pedido con su total calculado
+    pedidos_con_totales = []
+    
+    # Calcular el total de cada pedido y almacenarlo en una lista
+    for pedido in pedidos:
+        total_pedido = sum(linea.producto.precio * linea.cantidad for linea in pedido.lineapedido_set.all())
+        pedidos_con_totales.append({
+            'pedido': pedido,
+            'total': total_pedido,
+        })
+    
+    return render(request, 'restaurant/Productos.html', {'pedidos': pedidos_con_totales})
+
+

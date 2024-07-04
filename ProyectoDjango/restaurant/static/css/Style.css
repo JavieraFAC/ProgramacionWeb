@@ -1,11 +1,15 @@
-body{
+body {
   background-image: url('{% static "img/potatos.jpg" %}');
   background-size: cover;
   background-position: center;
-  height: 100vh;
   margin: 0;
+  /* Ajusta la altura mínima del cuerpo para permitir el scroll */
+  min-height: 100vh;
+  /* Añade un padding inferior para evitar que el contenido se solape con el pie de página */
+  padding-bottom: 50px; /* Ajusta según el tamaño de tu pie de página */
+  /* Habilita el scroll vertical */
+  overflow-y: auto;
 }
-
 .h1{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size:xxx-large;

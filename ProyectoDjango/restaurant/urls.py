@@ -20,9 +20,10 @@ urlpatterns = [
     path("eliminar/<int:producto_id>/",views.eliminar_producto, name="eliminar"),
     path("restar/<int:producto_id>/",views.restar_producto, name="restar"),
     path("limpiar",views.limpiar_carro, name="limpiar"),
-    #path("", views.procesar_pedido, name="procesar_pedido"),
     path("procesar-pedido/", views.procesar_pedido, name="procesar_pedido"),
     path('admin/', admin.site.urls),
+    path('limpiar/', views.limpiar_carro, name='limpiar'),
+    
 
     
 ]
