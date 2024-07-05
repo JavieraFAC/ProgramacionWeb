@@ -23,8 +23,8 @@ urlpatterns = [
     path("procesar-pedido/", views.procesar_pedido, name="procesar_pedido"),
     path('admin/', admin.site.urls),
     path('limpiar/', views.limpiar_carro, name='limpiar'),
-    
-
-    
+    path('adminPlatillos/', views.adminPlatillos, name='adminPlatillos'),
+    #
+   
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

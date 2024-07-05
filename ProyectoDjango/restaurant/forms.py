@@ -1,5 +1,5 @@
 from django import forms
-from .models import Contacto
+from .models import Contacto, Producto
 from django_recaptcha.fields import ReCaptchaField
 from django_recaptcha.widgets import ReCaptchaV3
 from django.forms import ModelForm
@@ -15,3 +15,10 @@ class ContactoForm(ModelForm):
         fields = "__all__"
 
 
+
+
+
+class ProductoForm(forms.ModelForm):
+    class Meta:
+        model = Producto
+        fields = ['nombre', 'categorias', 'imagen', 'precio', 'disponibilidad']

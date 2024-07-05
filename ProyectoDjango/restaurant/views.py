@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect,get_object_or_404
 from .models import Producto
 from .models import Alumno, Genero, Contacto
-from .forms import ContactoForm
+from .forms import ContactoForm,ProductoForm
 from .carro import Carro
 from .models import Producto,Pedido,LineaPedido
 from django.shortcuts import redirect
@@ -38,6 +38,7 @@ def Cuenta(request):
 def Planes(request):
     context={}
     return render(request, 'restaurant/Planes.html', context)
+
 
 def Formulario(request):
     if request.method == 'POST':
@@ -165,3 +166,40 @@ def Productos(request):
     return render(request, 'restaurant/Productos.html', {'pedidos': pedidos_con_totales})
 
 
+def adminPlatillos(request):
+    return render(request, 'restaurant/admin-platillos.html')
+
+
+
+
+
+##### estoy creando algo experimental 
+def adminPlatillos(request):
+    productos = Producto.objects.all()
+    
+    if request.method == 'POST':
+        if 'crear' in request.POST:
+            form = ProductoForm(request.POST, request.FILES)
+            if form.is_valid():
+                form.save()
+                return redirect('adminPlatillos')
+        elif 'actualizar' in request.POST:
+            producto_id = request.POST.get('producto_id')
+            producto = get_object_or_404(Producto, id=producto_id)
+            form = ProductoForm(request.POST, request.FILES, instance=producto)
+            if form.is_valid():
+                form.save()
+                return redirect('adminPlatillos')
+        elif 'eliminar' in request.POST:
+            producto_id = request.POST.get('producto_id')
+            producto = get_object_or_404(Producto, id=producto_id)
+            producto.delete()
+            return redirect('adminPlatillos')
+    else:
+        form = ProductoForm()
+
+    context = {
+        'productos': productos,
+        'form': form,
+    }
+    return render(request, 'restaurant/adminPlatillos.html', context)
