@@ -1,0 +1,42 @@
+{% extends 'restaurant/base.html'%}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<!-- Título -->
+<div class="container-fluid" style="background-color: rgb(26, 26, 26); text-align: center;">
+    <div class="col" style="color: aliceblue;padding: 40px;">
+      <h1 class="h1">INICIA SECION</h1>
+    </div>
+  </div>
+
+
+<form method="post" action="" class="container mt-5" style="max-width: 600px; color: white; margin-bottom: 2%;">
+  {% csrf_token %}
+
+  <div class="card bg-dark text-white p-4">
+      {% if messages %}
+          {% for mensaje in messages %}
+              <div class="alert alert-{{ mensaje.tags }}" role="alert">
+                  {{ mensaje }}
+              </div>
+          {% endfor %}
+      {% endif %}
+
+      {{ form|crispy }}
+
+      <div class="text-center mt-4">
+          <button type="submit" class="btn btn-outline-danger"">Ingresar</button>
+      </div>
+  </div>
+</form>
+
+<div style="padding: 100px;">
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'restaurant/base.html'%}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<!-- Título -->
+<div class="container-fluid" style="background-color: rgb(26, 26, 26); text-align: center;">
+  <div class="col" style="color: aliceblue;padding: 40px;">
+    <h1 class="h1">Crear usuario</h1>
+  </div>
+</div>
+
+
+<form method="post" action="" style="color: white; padding-top: 40px;padding-bottom: 40px; ">
+
+
+    {% csrf_token %}
+
+    <div style="width: 60%; margin: auto; padding:30px ;background-color: rgb(235, 235, 235); color:black; border-radius: 30px;">
+    {{ form|crispy }}
+    
+    
+<div style="text-align: center;padding: 20px;">
+  <button type="submit" class="btn btn-success">Crear nuevo usuario</button>
+</div>
+<!---->
+    </div>
+</form>
+
+{% endblock %}
