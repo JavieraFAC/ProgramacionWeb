@@ -1,7 +1,6 @@
 
 const nav = document.querySelector("nav");
 
-
 nav.innerHTML= `
 <div class="container-fluid">
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -49,7 +48,6 @@ nav.innerHTML= `
   </form>
 </div>
 `;
-
 
 
 
